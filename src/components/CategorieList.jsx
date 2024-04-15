@@ -1,6 +1,7 @@
 import { CategoryItem } from './CategoryItem'
 
 const CategorieList = ({ catalog = [] }) => {
+  console.log(catalog)
   return (
     <div className="list">
       {catalog.map((el) => (
