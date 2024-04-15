@@ -8,7 +8,7 @@ import { Recepie } from './pages/Recepie'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/react_meal">
       <div className="App">
         <Header />
 
