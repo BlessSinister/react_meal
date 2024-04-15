@@ -8,7 +8,7 @@ const Home = () => {
   const [filteredCatalog, setFilteredCatalog] = useState([])
   const handleSearch = (str) => {
     setFilteredCatalog(
-      catalog.map((item) =>
+      catalog.filter((item) =>
         item.strCategory.toLowerCase().includes(str.toLowerCase())
       )
     )
@@ -27,9 +27,7 @@ const Home = () => {
       {!catalog.length ? (
         <Preloade />
       ) : (
-        <CategorieList
-          catalog={!filteredCatalog.length ? catalog : filteredCatalog}
-        />
+        <CategorieList catalog={filteredCatalog} />
       )}
     </>
   )
